@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DIFF CHECKER</title>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+<body class="pt-30">
+<div class="l-section pt-0 pb-20">
+    <div class="l-inner">
+        <h1 class="text-center">DIFF CHECKER</h1>
+
+        <div class="accordion mb-20 mb-15">
+            <div class="accordion-title">
+                How to Use
+                <div class="accordion-icon">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="accordion-box">
+                <div class="accordion-box-inner">
+                    <p>1.比較したい画像を同じ名前でそれぞれ別のフォルダに保存してください。</p>
+                    <p>2.一方をBeforeフォルダに指定してください 。</p>
+                    <p>3.もう一方をAfterフォルダに指定してください。</p>
+                    <p>4.比較結果の保存先フォルダを指定してください。</p>
+                    <p>4.「DIFF CHECK!」を押してください。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="col-6 col-md-12 mb-md-10">
+                <div class="box">
+                    <h2 class="ttl-article mb-20">Select Before Folder</h2>
+                    <button id="BeforeFolder" type="button" class="js-btn btn btn-default btn-lg btn-block">変更前フォルダ選択</button>
+                    <p id="selectedBeforeFolderDisplay" class="display-input mt-10"></p>
+                    <input id="selectedBeforeFolder" type="hidden" name="selectedBeforeFolder" value="">
+                </div>
+            </div>
+            <div class="col-6 col-md-12 mb-md-10">
+                <div class="box">
+                    <h2 class="ttl-article mb-20">Select After Folder</h2>
+                    <button id="AfterFolder" type="button" class="js-btn btn btn-default btn-lg btn-block">変更後フォルダ選択</button>
+                    <p id="selectedAfterFolderDisplay" class="display-input mt-10"></p>
+                    <input id="selectedAfterFolder" type="hidden" name="selectedAfterFolder" value="">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-30">
+            <div class="col-12 col-md-12 mb-md-10">
+                <div class="box">
+                    <h2 class="ttl-article mb-20">Select Save Folder</h2>
+                    <button id="SaveFolder" type="button" class="js-btn btn btn-default btn-lg btn-block">保存先フォルダ選択</button>
+                    <p id="selectedSaveFolderDisplay" class="display-input mt-10"></p>
+                    <input id="selectedSaveFolder" type="hidden" name="selectedSaveFolder" value="">
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-30">
+            <button class="js-button btn btn-m btn-black">DIFF CHECK!</button>
+        </div>
+
+        <!-- 表示するモダールウィンドウ -->
+        <div class="refinemodal" id="modal">
+            <div class="refinemodal-wrap">
+                <div class="refinemodal-inner text-center">
+                    <h1 id="runningTitle">Running</h1>
+                    <p id="loadingImage"><img src="./assets/images/common/loading.gif" alt=""></p>
+                    <div id="progressReport" class="refinemodal-section">
+                        <p class="running-info"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="refinemodal-bottom">
+                <div class="refinemodal-bottom-close">閉じる</div>
+            </div>
+            <div class="modal-close"></div>
+        </div>
+        <!-- /表示するモダールウィンドウ -->
+
+    </div>
+</div>
+<script>
+    window.jQuery = window.$ = require('../node_modules/jquery/dist/jquery.min.js');
+</script>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script type="text/javascript" src="./assets/js/common.js"></script>
+<script type="text/javascript" src="./index.js"></script>
+<script type="text/javascript" src="./diff-screen.js"></script>
+</body>
+</html>
+<style>
+    h1{
+        font-size: 42px;
+    }
+    h1, h2, h5, .js-button, .accordion-title{
+        font-family: 'Bangers';
+        letter-spacing: 0.1em;
+    }
+    .display-input{
+        white-space: nowrap;
+        overflow: auto;
+    }
+    @media screen and (min-width: 769px){
+        .btn.btn-default:not(.btn-disabled):hover {
+            padding: 6px 10px;
+        }
+    }
+    .text-link-blank{
+        text-decoration: underline;
+        cursor: pointer;
+        cursor: hand;
+    }
+</style>

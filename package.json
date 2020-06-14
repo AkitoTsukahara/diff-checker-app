@@ -1,0 +1,27 @@
+{
+  "name": "diff-checker-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkitoTsukahara/diff-checker-app.git"
+  },
+  "author": "Akito Tsukahara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AkitoTsukahara/diff-checker-app/issues"
+  },
+  "homepage": "https://github.com/AkitoTsukahara/diff-checker-app#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "jquery": "^3.5.1",
+    "pixel-diff": "^1.0.1"
+  },
+  "devDependencies": {
+    "electron": "^9.0.4"
+  }
+}
